@@ -1,12 +1,19 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { useState } from "react";
+import { ChatSidebar } from "@/components/ChatSidebar";
+import { ChatWindow } from "@/components/ChatWindow";
+import { AuthModal } from "@/components/AuthModal";
 
 const Index = () => {
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+
+  if (!isAuthenticated) {
+    return <AuthModal onAuthSuccess={() => setIsAuthenticated(true)} />;
+  }
+
   return (
-    <div className="min-h-screen flex items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
+    <div className="h-screen flex overflow-hidden bg-chat-bg">
+      <ChatSidebar />
+      <ChatWindow />
     </div>
   );
 };

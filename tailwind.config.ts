@@ -26,7 +26,8 @@ export default {
 				foreground: 'hsl(var(--foreground))',
 				primary: {
 					DEFAULT: 'hsl(var(--primary))',
-					foreground: 'hsl(var(--primary-foreground))'
+					foreground: 'hsl(var(--primary-foreground))',
+					glow: 'hsl(var(--primary-glow))'
 				},
 				secondary: {
 					DEFAULT: 'hsl(var(--secondary))',
@@ -61,7 +62,30 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				chat: {
+					bg: 'hsl(var(--chat-bg))',
+					sidebar: 'hsl(var(--chat-sidebar))',
+					'message-sent': 'hsl(var(--message-sent))',
+					'message-sent-foreground': 'hsl(var(--message-sent-foreground))',
+					'message-received': 'hsl(var(--message-received))',
+					'message-received-foreground': 'hsl(var(--message-received-foreground))',
+					'message-hover': 'hsl(var(--message-hover))',
+					'online-status': 'hsl(var(--online-status))',
+					'typing-indicator': 'hsl(var(--typing-indicator))'
 				}
+			},
+			backgroundImage: {
+				'gradient-primary': 'var(--gradient-primary)',
+				'gradient-message': 'var(--gradient-message)'
+			},
+			boxShadow: {
+				'message': 'var(--shadow-message)',
+				'sidebar': 'var(--shadow-sidebar)'
+			},
+			transitionTimingFunction: {
+				'smooth': 'var(--transition-smooth)',
+				'bounce': 'var(--transition-bounce)'
 			},
 			borderRadius: {
 				lg: 'var(--radius)',

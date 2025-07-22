@@ -2,9 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Chat App Design System - Modern messaging interface */
 
 @layer base {
   :root {
@@ -17,8 +15,9 @@ All colors MUST be HSL.
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 220 70% 50%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 220 70% 60%;
 
     --secondary: 210 40% 96.1%;
     --secondary-foreground: 222.2 47.4% 11.2%;
@@ -26,17 +25,40 @@ All colors MUST be HSL.
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 220 70% 55%;
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --ring: 220 70% 50%;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
+
+    /* Chat-specific colors */
+    --chat-bg: 240 10% 98%;
+    --chat-sidebar: 0 0% 100%;
+    --message-sent: 220 70% 50%;
+    --message-sent-foreground: 0 0% 100%;
+    --message-received: 0 0% 100%;
+    --message-received-foreground: 222.2 84% 4.9%;
+    --message-hover: 210 40% 96%;
+    --online-status: 142 76% 36%;
+    --typing-indicator: 215.4 16.3% 46.9%;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
+    --gradient-message: linear-gradient(135deg, hsl(var(--message-sent)), hsl(220 70% 45%));
+
+    /* Shadows */
+    --shadow-message: 0 2px 8px hsl(var(--primary) / 0.1);
+    --shadow-sidebar: 0 0 20px hsl(0 0% 0% / 0.05);
+
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
     --sidebar-background: 0 0% 98%;
 
